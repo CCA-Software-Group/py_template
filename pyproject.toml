@@ -14,7 +14,7 @@ license = { file = "LICENSE.rst", content-type = "text/plain" }
 authors = [
   { name = "CCA Software Group", email = "jjennings@flatironinstitute.org" },
 ]
-dependencies = []
+dependencies = ["numpy>=1.24"]
 dynamic = ["version"]
 
 [project.optional-dependencies]
