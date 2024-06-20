@@ -4,7 +4,7 @@ Template Python repository
 This is a basic template for a Python repository, including:
 - a source code directory `py_template`, with an example script `example_module.py` 
 - a `test` folder for writing unit tests, with an example file
-- continuous integration 
+- continuous integration (the `.github/workflows/test.yml` file sets the tests in the `test` folder to run on each push).
 - documentation pages with ReadTheDocs
 - GitHub templates for users to submit issues
 
