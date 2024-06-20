@@ -1,0 +1,82 @@
+[build-system]
+requires = [
+  "setuptools>=62.1",
+  "setuptools_scm[toml]>=6.2",
+  "wheel",]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "py_template"
+description = "Template Python repository"
+requires-python = ">=3.9"
+readme = { file = "README.rst", content-type = "text/x-rst" }
+license = { file = "LICENSE.rst", content-type = "text/plain" }
+authors = [
+  { name = "CCA Software Group", email = "jjennings@flatironinstitute.org" },
+]
+dependencies = []
+dynamic = ["version"]
+
+[project.optional-dependencies]
+test = [
+    "pytest",
+    "pytest-cov",
+]
+docs = [
+    "sphinx",
+    "sphinx-automodapi",
+    "sphinx_rtd_theme",
+]
+dev = ["py_template[test, docs]"]
+
+[tool.setuptools]
+zip-safe = false
+include-package-data = true
+
+[tool.setuptools.packages.find]
+
+[tool.setuptools_scm]
+write_to = "py_template/version.py"
+
+[tool.pytest.ini_options]
+testpaths = [
+  "test",
+  "docs",
+]
+
+[tool.coverage.run]
+omit = [
+ "py_template/__init*",
+ "py_template/*setup_package*",
+ "py_template/extern/*",
+ "py_template/version*",
+ "*/py_template/__init*",
+ "*/py_template/*setup_package*",
+ "*/py_template/extern/*",
+ "*/py_template/version*",
+ "test/*",
+ "*/test/*",
+ "test/conftest.py",
+ "test/conftest.py", 
+]
+
+[tool.coverage.report]
+exclude_lines = [
+  # Have to re-enable the standard pragma
+  "pragma: no cover",
+  # Don't complain about packages we have installed
+  "except ImportError",
+  # Don't complain if tests don't hit assertions
+  "raise AssertionError",
+  "raise NotImplementedError",
+  # Don't complain about script hooks
+  "def main(.*):",
+  # Ignore branches that don't pertain to this version of Python
+  "pragma: py{ignore_python_version}",
+  # Don't complain about IPython completion helper
+  "def _ipython_key_completions_",
+  # typing.TYPE_CHECKING is False at runtime
+  "if TYPE_CHECKING:",
+  # Ignore typing overloads
+  "@overload",
+]
