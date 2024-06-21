@@ -16,7 +16,7 @@ To make a new Python repo (or codespace) using this template:
 
 After cloning your repo to your local machine, from the project's local root directory, you can:
 - Install your package with all optional dependencies: 
-`pip install -e ".[all]"`
+`pip install -e ".[dev]"`
 - Run your tests:
 `pytest`
 - Build your docs:
