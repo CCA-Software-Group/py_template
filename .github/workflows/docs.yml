@@ -33,7 +33,7 @@ jobs:
         run: |
           sudo apt-get install pandoc
           pip install setuptools --upgrade
-          pip install .[test, docs]
+          pip install .[test,docs]
 
       - name: Make docs
         run: |
