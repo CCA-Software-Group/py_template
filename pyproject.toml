@@ -26,6 +26,10 @@ docs = [
     "sphinx",
     "sphinx-automodapi",
     "sphinx_rtd_theme",
+    "sphinxcontrib-fulltoc",
+    "nbsphinx",
+    "jupyter_client",
+    "ipykernel",
 ]
 dev = ["py_template[test, docs]"]
 
