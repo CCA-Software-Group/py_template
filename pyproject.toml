@@ -35,6 +35,8 @@ docs = [
 coding_standards = [
     "black",
     "ruff",
+]
+type_checking = [
     "mypy",
 ]
 dev = ["py_template[test, docs, coding_standards]"]
@@ -49,6 +51,13 @@ include-package-data = true
 testpaths = [
   "test",
   "docs",
+]
+
+[tool.mypy]
+exclude = [
+  "docs",
+  "py_template/__init__.py",
+  "test/__init__.py",
 ]
 
 [tool.coverage.run]
