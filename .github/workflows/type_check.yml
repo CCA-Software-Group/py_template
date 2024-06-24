@@ -1,9 +1,9 @@
-name: Coding standards
+name: Type checking
 on: push
 
 jobs:
-  check_code_standards:
-    name: Format, lint, type check code
+  type_check:
+    name: Format, lint code
     runs-on: ubuntu-latest
 
     steps:
@@ -21,16 +21,10 @@ jobs:
       - name: Install dependencies
         run: | 
           pip install setuptools --upgrade
-          pip install .[coding_standards]
+          pip install .[type_checking]
 
       - name: Install package
-        run: pip install .    
-
-      - name: Run `black` formatter
-        run: black .
-
-      - name: Run `ruff` linter / formatter
-        run: ruff check .
+        run: pip install .
 
       - name: Run `mypy` type checker
         run: mypy --strict .
