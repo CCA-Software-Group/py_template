@@ -1,6 +1,9 @@
 Template Python repository
 --------------------------
 
+[![Tests](https://github.com/CCA-Software-Group/py_template/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/CCA-Software-Group/py_template/actions/workflows/tests.yml)
+[![Coverage](https://cca-software-group.github.io/py_template/coverage/badge.svg)](https://cca-software-group.github.io/py_template/coverage/index.html)
+      
 This is a basic template for a Python repository, including:
 - a source code directory `py_template`, with an example script `example_module.py` 
 - a `test` folder for writing unit tests, with an example file
