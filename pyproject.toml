@@ -15,7 +15,7 @@ authors = [
   { name = "Jeff Jennings", email = "jjennings@flatironinstitute.org" },
 ]
 dependencies = ["numpy>=1.24"]
-- static = ["version"]
+static = ["version"]
 
 [project.optional-dependencies]
 test = [
@@ -32,7 +32,12 @@ docs = [
     "jupyter_client",
     "ipykernel",
 ]
-dev = ["py_template[test, docs]"]
+coding_standards = [
+    "black",
+    "ruff",
+    "mypy",
+]
+dev = ["py_template[test, docs, coding_standards]"]
 
 [tool.setuptools]
 zip-safe = false
