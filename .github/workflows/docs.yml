@@ -1,10 +1,10 @@
 name: docs
 
 on:
-  push
-    branches: [main]
-# when a review is requested on a PR that targets `main`,
-# or the PR is closed:    
+  push:
+    branches: 
+      - main
+# when a review is requested on a PR that targets `main`, or the PR is closed:    
   # pull_request:
   #   types: [review_requested, closed]
 
