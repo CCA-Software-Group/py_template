@@ -8,7 +8,7 @@ Template Python repository
 This is a basic template for a Python repository, including:
 - a source code directory `py_template`, with an example script `example_module.py` 
 - a `test` folder for writing unit tests, with an example file
-- documentation pages with ReadTheDocs
+- a [documentation site](https://cca-software-group.github.io/py_template/index.html)
 - continuous integration for tests, coverage, and docs (see `.github/workflows`).
 - GitHub templates for users to submit issues
 
