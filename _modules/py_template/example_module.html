@@ -5,7 +5,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>py_template.example_module &mdash; py_template 0.1.dev1+g1b95284 documentation</title>
+  <title>py_template.example_module &mdash; py_template 0.0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=fd3f3429" />
@@ -18,7 +18,7 @@
   
         <script src="../../_static/jquery.js?v=5d32c60e"></script>
         <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../../_static/documentation_options.js?v=d3e13add"></script>
+        <script src="../../_static/documentation_options.js?v=d45e8c67"></script>
         <script src="../../_static/doctools.js?v=9a2dae69"></script>
         <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/js/theme.js"></script>
@@ -81,12 +81,12 @@
 <span></span><span class="k">def</span> <span class="nf">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Example function.</span>
-<span class="sd">    </span>
+
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
-<span class="sd">    n : int </span>
+<span class="sd">    n : int</span>
 <span class="sd">        Integer term up to which the sequence is calculated</span>
-<span class="sd">    </span>
+
 <span class="sd">    Returns</span>
 <span class="sd">    -------</span>
 <span class="sd">    fib_seq : list[int]</span>
@@ -95,11 +95,11 @@
     <span class="n">fib_seq</span> <span class="o">=</span> <span class="p">[]</span>
 
     <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
-    
+
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
         <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
         <span class="n">fib_seq</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-    
+
     <span class="k">return</span> <span class="n">fib_seq</span></div>
 
 
@@ -117,17 +117,20 @@
 <span class="sd">    purpose : str</span>
 <span class="sd">        Group objectives</span>
 <span class="sd">    &quot;&quot;&quot;</span>
+
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">people</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">purpose</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">people</span> <span class="o">=</span> <span class="n">people</span> 
+        <span class="bp">self</span><span class="o">.</span><span class="n">people</span> <span class="o">=</span> <span class="n">people</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">purpose</span> <span class="o">=</span> <span class="n">purpose</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">meeting_format</span> <span class="o">=</span> <span class="s1">&#39;hack session + office hour + periodic tutorial&#39;</span>        
+        <span class="bp">self</span><span class="o">.</span><span class="n">meeting_format</span> <span class="o">=</span> <span class="s2">&quot;hack session + office hour + periodic tutorial&quot;</span>
 
     <span class="k">def</span> <span class="nf">long_term_goals</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-        <span class="n">research_goal</span> <span class="o">=</span> <span class="s1">&#39;develop open-source research software for astronomy&#39;</span>
-        <span class="n">community_goal</span> <span class="o">=</span> <span class="s1">&#39;improve diversity in astro software positions&#39;</span>
-        <span class="n">education_goal</span> <span class="o">=</span> <span class="s1">&#39;organize and run astro software workshops&#39;</span>
-        <span class="n">cca_goal</span> <span class="o">=</span> <span class="s1">&#39;improve software knowledge and practices at CCA&#39;</span>
-        <span class="k">return</span> <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">purpose</span><span class="p">,</span> <span class="n">research_goal</span><span class="p">,</span> <span class="n">community_goal</span><span class="p">,</span> <span class="n">education_goal</span><span class="p">,</span> <span class="n">cca_goal</span><span class="p">])</span></div>
+        <span class="n">research_goal</span> <span class="o">=</span> <span class="s2">&quot;develop open-source research software for astronomy&quot;</span>
+        <span class="n">community_goal</span> <span class="o">=</span> <span class="s2">&quot;improve diversity in astro software positions&quot;</span>
+        <span class="n">education_goal</span> <span class="o">=</span> <span class="s2">&quot;organize and run astro software workshops&quot;</span>
+        <span class="n">cca_goal</span> <span class="o">=</span> <span class="s2">&quot;improve software knowledge and practices at CCA&quot;</span>
+        <span class="k">return</span> <span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
+            <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">purpose</span><span class="p">,</span> <span class="n">research_goal</span><span class="p">,</span> <span class="n">community_goal</span><span class="p">,</span> <span class="n">education_goal</span><span class="p">,</span> <span class="n">cca_goal</span><span class="p">]</span>
+        <span class="p">)</span></div>
 
 </pre></div>
 
