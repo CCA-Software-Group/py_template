@@ -3,12 +3,13 @@ Template Python repository
 
 [![Tests](https://github.com/CCA-Software-Group/py_template/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/CCA-Software-Group/py_template/actions/workflows/tests.yml)
 [![Coverage](https://cca-software-group.github.io/py_template/coverage/badge.svg)](https://cca-software-group.github.io/py_template/coverage/index.html)
-      
+[![Docs](https://github.com/CCA-Software-Group/py_template/actions/workflows/docs.yml/badge.svg)](https://cca-software-group.github.io/py_template/)
+
 This is a basic template for a Python repository, including:
 - a source code directory `py_template`, with an example script `example_module.py` 
 - a `test` folder for writing unit tests, with an example file
-- continuous integration (the `.github/workflows/test.yml` file sets the tests in the `test` folder to run on each push).
 - documentation pages with ReadTheDocs
+- continuous integration for tests, coverage, and docs (see `.github/workflows`).
 - GitHub templates for users to submit issues
 
 To make a new Python repo (or codespace) using this template:
@@ -22,5 +23,7 @@ After cloning your repo to your local machine, from the project's local root dir
 `pip install -e ".[dev]"`
 - Run your tests:
 `pytest`
-- Build your docs:
-`tox -e build_docs`
+- Build your docs locally:
+`tox -e build_docs` or `cd docs; make html`
+
+After building the docs, view them with `open docs/_build/html/index.html`
