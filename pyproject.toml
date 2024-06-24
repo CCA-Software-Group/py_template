@@ -12,9 +12,10 @@ requires-python = ">=3.10"
 readme = { file = "README.rst", content-type = "text/x-rst" }
 license = { file = "LICENSE.rst", content-type = "text/plain" }
 authors = [
-  { name = "CCA Software Group", email = "jjennings@flatironinstitute.org" },
+  { name = "Jeff Jennings", email = "jjennings@flatironinstitute.org" },
 ]
 dependencies = ["numpy>=1.24"]
+- static = ["version"]
 
 [project.optional-dependencies]
 test = [
