@@ -3,7 +3,7 @@ Documentation
 
 Welcome to the `py_template` docs!
 
-The API has an example entries for the example function and class in the template codebase.
+The API has example entries for the function and class in `example_module.py`.
 
 .. toctree::
    :maxdepth: 1
