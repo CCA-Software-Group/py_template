@@ -15,7 +15,7 @@ authors = [
   { name = "Jeff Jennings", email = "jjennings@flatironinstitute.org" },
 ]
 dependencies = ["numpy>=1.24"]
-static = ["version"]
+dynamic = ["version"]
 
 [project.optional-dependencies]
 test = [
