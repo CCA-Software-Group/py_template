@@ -3,7 +3,7 @@ on: push
 
 jobs:
   type_check:
-    name: Format, lint code
+    name: Type check code with mypy
     runs-on: ubuntu-latest
 
     steps:
