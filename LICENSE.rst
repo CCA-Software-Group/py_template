@@ -1,7 +1,7 @@
 `py_template` author: Jeff Jennings (jjennings@flatironinstitute.org)
 
 This package is based upon
-the `Openastronomy packaging guide <https://github.com/OpenAstronomy/packaging-guide>`_
+the `OpenAstronomy packaging guide <https://github.com/OpenAstronomy/packaging-guide>`_
 which is licensed under the BSD 3-clause license.
 
 This project is based upon the `Astropy package template <https://github.com/astropy/package-template/)>`_ which is licensed under the terms
