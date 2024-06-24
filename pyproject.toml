@@ -19,7 +19,6 @@ dependencies = ["numpy>=1.24"]
 [project.optional-dependencies]
 test = [
     "pytest",
-    "pytest-cov",
     "coverage",
     "coverage-badge",
 ]
