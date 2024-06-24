@@ -24,6 +24,4 @@ After cloning your repo to your local machine, from the project's local root dir
 - Run your tests:
 `pytest`
 - Build your docs locally:
-`tox -e build_docs` or `cd docs; make html`
-
-After building the docs, view them with `open docs/_build/html/index.html`
+`tox -e build_docs` or `cd docs; make html`. After building the docs, view them with `open docs/_build/html/index.html`
