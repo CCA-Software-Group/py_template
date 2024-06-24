@@ -56,8 +56,6 @@ testpaths = [
 [tool.mypy]
 exclude = [
   "docs",
-  "py_template/__init__.py",
-  "test/__init__.py",
 ]
 explicit_package_bases = "True"
 
