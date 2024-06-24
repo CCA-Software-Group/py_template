@@ -59,7 +59,7 @@ jobs:
       # by a subsequent job in the workflow.
       # only store the artifact for 'retention-days'
       - name: Upload docs artifact
-        if: github.event.pull_request.merged == true
+        # if: github.event.pull_request.merged == true
         uses: actions/upload-artifact@v3
         with:
           name: built_docs
@@ -69,7 +69,7 @@ jobs:
   docs-deploy:
     name: Deploy docs
     needs: docs-build
-    if: github.event.pull_request.merged == true
+    # if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
 
     steps:
