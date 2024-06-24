@@ -39,9 +39,9 @@ class SoftwareGroup:
         self.purpose = purpose
         self.meeting_format = 'hack session + office hour + periodic tutorial'        
 
-    def long_term_goals(self, purpose):
+    def long_term_goals(self):
         research_goal = 'develop open-source research software for astronomy'
         community_goal = 'improve diversity in astro software positions'
         education_goal = 'organize and run astro software workshops'
         cca_goal = 'improve software knowledge and practices at CCA'
-        return ', '.join(purpose, research_goal, community_goal, education_goal, cca_goal)
+        return ', '.join([self.purpose, research_goal, community_goal, education_goal, cca_goal])
