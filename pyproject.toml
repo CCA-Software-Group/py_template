@@ -15,7 +15,6 @@ authors = [
   { name = "CCA Software Group", email = "jjennings@flatironinstitute.org" },
 ]
 dependencies = ["numpy>=1.24"]
-dynamic = ["version"]
 
 [project.optional-dependencies]
 test = [
@@ -41,9 +40,6 @@ include-package-data = true
 
 [tool.setuptools.packages.find]
 
-[tool.setuptools_scm]
-write_to = "py_template/version.py"
-
 [tool.pytest.ini_options]
 testpaths = [
   "test",
@@ -55,11 +51,9 @@ omit = [
  "py_template/__init*",
  "py_template/*setup_package*",
  "py_template/extern/*",
- "py_template/version*",
  "*/py_template/__init*",
  "*/py_template/*setup_package*",
  "*/py_template/extern/*",
- "*/py_template/version*",
  "test/*",
  "*/test/*",
  "test/conftest.py",
