@@ -6,7 +6,7 @@ Template Python repository
 [![Docs](https://github.com/CCA-Software-Group/py_template/actions/workflows/docs.yml/badge.svg)](https://cca-software-group.github.io/py_template/)
 
 This is a basic template for a Python repository, with the components needed to develop and release an open source software package. These include unit tests; type annotations; a documentation site with an API; and continuous integration for tests, code coverage, linting/formatting, type checking, and publishing the docs.
-
+ 
 In more depth, the file structure is: 
 1) `.github` has two subfolders:
     * `ISSUE_TEMPLATE` has files that are templates users can select from when opening an issue in the repo on GitHub
