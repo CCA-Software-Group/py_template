@@ -10,7 +10,7 @@ This is a basic template for a Python repository, with the components needed to 
 In more depth, the file structure is: 
 - `.github` has two subfolders:
     * `ISSUE_TEMPLATE` has files that are templates users can select from when opening an issue in the repo on GitHub
-    * `workflows` implements continuous integration (CI) through GitHub action files that are automatically run according to a chosen trigger. These are currently:
+    * `workflows` implements continuous integration (CI) through GitHub 'actions' that are automatically run according to a chosen trigger. These are currently:
         1) `docs.yml` builds and deploys the [documentation site](https://cca-software-group.github.io/py_template/index.html) when a push is made to `main`.
         2) `format_lint.yml` lints and formats the code on each push using `ruff` and `black`.
         3) `tests.yml` runs tests with `pytest` on each push.
