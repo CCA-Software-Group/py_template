@@ -19,3 +19,4 @@ The API has example entries for the function and class in `example_module.py`.
 
     API <py_API>
     Index <genindex>
+    GitHub repo <https://github.com/CCA-Software-Group/py_template>
