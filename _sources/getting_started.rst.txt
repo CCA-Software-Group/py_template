@@ -40,7 +40,7 @@ Interacting with your new code
 | 4) Run type checking using mypy:
 | `mypy --strict .`
 | 5) Build your docs locally:
-| `tox -e build_docs` or `cd docs; make html`. 
+| `tox -e build_docs` or `cd docs; make html` 
 | After building the docs, view them with 
 | `open docs/_build/html/index.html`
 
