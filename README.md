@@ -7,7 +7,9 @@ Template Python repository
 
 This is a basic template for a Python repository, with the components needed to develop and release an open source software package. These include unit tests; type annotations; a documentation site with an API; and continuous integration for tests, code coverage, linting/formatting, type checking, and publishing the docs.
 
-In more depth, the file structure is: 
+See the [docs](https://cca-software-group.github.io/py_template/) for a 'Getting Started' guide with steps on how to make your own Python repo using this template and what to do next to build your own package. 
+
+The file structure of this repo is: 
 1) `.github` has two subfolders:
     * `ISSUE_TEMPLATE` has files that are templates users can select from when opening an issue in the repo on GitHub
     * `workflows` implements continuous integration (CI) through GitHub 'actions' that are automatically run according to a chosen trigger. These are currently:
@@ -25,26 +27,3 @@ In more depth, the file structure is:
 9) `README.md` is the file you're reading! It has badges that use the CI to display if the unit tests are passing, what percentage of the code is covered by the tests, and if the docs build and deploy is passing.
 10) `pyproject.toml` is the configuration file for the entire package. See the [Python docs](https://packaging.python.org/en/latest/guides/writing-pyproject-toml/) for a description of its contents.
 11) `tox.ini` is a configuration file used to set up testing. See the [tox docs](https://tox.wiki/en/latest/index.html) for a description of its contents.
-
-To make a new Python repo (or codespace) using this template:
-1) Click on 'Use this template' button at the top-right of the GitHub page. 
-2) In your new repo, rename (search and replace) all instances of 'py_template' with the name for your package. 
-3) You can also update the `authors` field in `pyproject.toml` with your name(s) and email(s), and the name and email fields in `LICENSE.rst` (the template is partially based on the [OpenAstronomy packaging guide](https://github.com/OpenAstronomy/packaging-guide), so please retain that aspect of the license).
-
-After cloning your repo to your computer, from the project's root directory, you can:
-1) Install your package with all optional dependencies: 
-`pip install -e ".[dev]"`
-2) Run your tests by simply entering:
-`pytest`
-3) Run linting and formatting to see their effects:
-`black .` and `ruff check .`
-4) Run type checking using mypy:
-`mypy --strict .`
-5) Build your docs locally:
-`tox -e build_docs` or `cd docs; make html`. After building the docs, view them with `open docs/_build/html/index.html`
-
-When you're writing your software, you may want to:
-1) Add new unit tests in `test/test_*.py` for new functions and classes. Test not just whether the new code runs, but also if it gives a sensible result.
-2) Update the docs, including the main page (`docs/index.rst`), adding pages, and updating the API (`docs/py_API.rst`) when you add new functions and classes.
-3) Optionally change the CI triggers for each of the actions in `workflows`.
-4) Update the changelog in `HISTORY.rst` when you're ready to release your first version of the code!
