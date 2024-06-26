@@ -14,7 +14,7 @@ from py_template import __version__
 release = __version__
 
 project = "py_template"
-author = "CCA Software Group"
+author = "Jeff Jennings"
 copyright = f"{datetime.datetime.now().year}, {author}"  # noqa: A001
 
 # -- General configuration ---------------------------------------------------
