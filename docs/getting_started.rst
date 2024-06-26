@@ -26,7 +26,9 @@ Making a new Python repo using `py_template`
 --------------------------------------------
 | 1) Click the 'Use this template' button at the top-right of the GitHub page. 
 | 2) In your new repo, rename (search and replace) all instances of "py_template" with the name for your package. 
-| 3) Update the `authors` field in `pyproject.toml`, `docs/conf.py` and `LICENSE.rst` (the template is partially based on the `OpenAstronomy packaging guide <https://github.com/OpenAstronomy/packaging-guide>`_, so please retain that aspect of the license).
+| 3a) If you create a public repo, to set up your docs deployment CI: from your repo page, go to 'Settings' then 'Pages', then set 'Source' as 'Deploy from a branch' and set 'Branch' as 'gh-pages'. Your docs will now deploy according to the trigger in `.github/workflows/docs.yml`
+| 3b) If you create a private repo, the docs build will fail because private repos can't have a public docs page. You can disable the docs build and deploy workflows in `.github/workflows/docs.yml`
+| 4) Update the `authors` field in `pyproject.toml`, `docs/conf.py` and `LICENSE.rst` (the template is partially based on the `OpenAstronomy packaging guide <https://github.com/OpenAstronomy/packaging-guide>`_, so please retain that aspect of the license).
 
 Interacting with your new code
 ------------------------------
