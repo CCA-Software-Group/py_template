@@ -1,11 +1,35 @@
 Getting started
 ===============
 
-| To make a new Python repo using `py_template`:
+Repo file structure
+-------------------
+| The `py_template` repo has a common file structure:
+| 1) `.github` has two subfolders:
+|   * `ISSUE_TEMPLATE` has files that are templates users can select from when opening an issue in the repo on GitHub
+|   * `workflows` implements continuous integration (CI) through GitHub 'actions' that are automatically run according to a chosen trigger. These are currently:
+|        - `docs.yml` builds and deploys this docs site when a push is made to `main`.
+|        - `format_lint.yml` lints and formats the code on each push using *ruff* and *black*.
+|        - `tests.yml` runs tests with *pytest* on each push.
+|        - `type_check.yml` runs type checking with *mypy* on each push. The CI continues even if the type checker finds errors.
+| 2) `docs` has the files used to build the docs with *Sphinx*, with the site content in `index.rst` and `py_API.rst`.
+| 3) `py_template` is the source code folder, with the necessary `__init__.py` and example code file, `example_module.py`.
+| 4) `test` has the unit tests, with example tests for the source code file in `test_example_module.py`. When you add new test files, they should start with `test_` so *pytest* recognizes them.
+| 5) `.gitignore` is a list of file types that are ignored when you push to the remote repo.
+| 6) `HISTORY.rst` is the change log that you should update as you implement the packaged version.
+| 7) `LICENSE.rst` has the package's license.
+| 8) `MANIFEST.in` has instructions for how to pre-process the package (which files to exclude) when preparing to release it to PyPI (the Python Package Index). Packages uploaded to PyPI can be installed by users with *pip*. 
+| 9) `README.md` is the file you're reading! It has badges that use the CI to display if the unit tests are passing, what percentage of the code is covered by the tests, and if the docs build and deploy is passing.
+| 10) `pyproject.toml` is the configuration file for the entire package. See the `Python docs <https://packaging.python.org/en/latest/guides/writing-pyproject-toml/>`_ for a description of its contents.
+| 11) `tox.ini` is a configuration file used to set up testing. See the `tox docs <https://tox.wiki/en/latest/index.html>`_ for a description of its contents.
+
+Making a new Python repo using `py_template`
+--------------------------------------------
 | 1) Click the 'Use this template' button at the top-right of the GitHub page. 
 | 2) In your new repo, rename (search and replace) all instances of "py_template" with the name for your package. 
 | 3) Update the `authors` field in `pyproject.toml`, `docs/conf.py` and `LICENSE.rst` (the template is partially based on the `OpenAstronomy packaging guide <https://github.com/OpenAstronomy/packaging-guide>`_, so please retain that aspect of the license).
 
+Interacting with your new code
+------------------------------
 | After cloning your repo to your computer, from the project's root directory, you can:
 | 1) Install your package with all optional dependencies: 
 | `pip install -e ".[dev]"`
@@ -20,7 +44,8 @@ Getting started
 | After building the docs, view them with 
 | `open docs/_build/html/index.html`
 
-| When you're writing your software, you may want to:
+Developing your package
+-----------------------
 | 1) Add new unit tests in `test/test_*.py` for new functions and classes. Test not just whether the new code runs, but also if it gives a sensible result.
 | 2) Update the docs, including the main page (`docs/index.rst`), adding pages, and updating the API (`docs/py_API.rst`) when you add new functions and classes.
 | 3) Optionally change the CI triggers for each of the actions in `.github/workflows`.
