@@ -115,7 +115,6 @@
 <div class="line">8) <code class="xref py py-obj docutils literal notranslate"><span class="pre">MANIFEST.in</span></code> has instructions for how to pre-process the package (which files to exclude) when preparing to release it to PyPI (the Python Package Index). Packages uploaded to PyPI can be installed by users with <em>pip</em>.</div>
 <div class="line">9) <code class="xref py py-obj docutils literal notranslate"><span class="pre">README.md</span></code> is the file you’re reading! It has badges that use the CI to display if the unit tests are passing, what percentage of the code is covered by the tests, and if the docs build and deploy is passing.</div>
 <div class="line">10) <code class="xref py py-obj docutils literal notranslate"><span class="pre">pyproject.toml</span></code> is the configuration file for the entire package. See the <a class="reference external" href="https://packaging.python.org/en/latest/guides/writing-pyproject-toml/">Python docs</a> for a description of its contents.</div>
-<div class="line">11) <code class="xref py py-obj docutils literal notranslate"><span class="pre">tox.ini</span></code> is a configuration file used to set up testing. See the <a class="reference external" href="https://tox.wiki/en/latest/index.html">tox docs</a> for a description of its contents.</div>
 </div>
 </section>
 <section id="making-a-new-python-repo-using-py-template">
@@ -141,7 +140,7 @@
 <div class="line">4) Run type checking using mypy:</div>
 <div class="line"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mypy</span> <span class="pre">--strict</span> <span class="pre">.</span></code></div>
 <div class="line">5) Build your docs locally:</div>
-<div class="line"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tox</span> <span class="pre">-e</span> <span class="pre">build_docs</span></code> or <code class="xref py py-obj docutils literal notranslate"><span class="pre">cd</span> <span class="pre">docs;</span> <span class="pre">make</span> <span class="pre">html</span></code></div>
+<div class="line"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cd</span> <span class="pre">docs;</span> <span class="pre">make</span> <span class="pre">html</span></code></div>
 <div class="line">After building the docs, view them with</div>
 <div class="line"><code class="xref py py-obj docutils literal notranslate"><span class="pre">open</span> <span class="pre">docs/_build/html/index.html</span></code></div>
 </div>
