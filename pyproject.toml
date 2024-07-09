@@ -62,13 +62,7 @@ explicit_package_bases = "True"
 [tool.coverage.run]
 omit = [
  "py_template/__init*",
- "py_template/*setup_package*",
- "py_template/extern/*",
  "*/py_template/__init*",
- "*/py_template/*setup_package*",
- "*/py_template/extern/*",
  "test/*",
  "*/test/*",
- "test/conftest.py",
- "test/conftest.py", 
 ]
