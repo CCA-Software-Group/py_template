@@ -20,7 +20,6 @@ Repo file structure
 | 8) `MANIFEST.in` has instructions for how to pre-process the package (which files to exclude) when preparing to release it to PyPI (the Python Package Index). Packages uploaded to PyPI can be installed by users with *pip*. 
 | 9) `README.md` is the file you're reading! It has badges that use the CI to display if the unit tests are passing, what percentage of the code is covered by the tests, and if the docs build and deploy is passing.
 | 10) `pyproject.toml` is the configuration file for the entire package. See the `Python docs <https://packaging.python.org/en/latest/guides/writing-pyproject-toml/>`_ for a description of its contents.
-| 11) `tox.ini` is a configuration file used to set up testing. See the `tox docs <https://tox.wiki/en/latest/index.html>`_ for a description of its contents.
 
 Making a new Python repo using `py_template`
 --------------------------------------------
@@ -42,7 +41,7 @@ Interacting with your new code
 | 4) Run type checking using mypy:
 | `mypy --strict .`
 | 5) Build your docs locally:
-| `tox -e build_docs` or `cd docs; make html` 
+| `cd docs; make html`
 | After building the docs, view them with 
 | `open docs/_build/html/index.html`
 
