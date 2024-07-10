@@ -1,21 +1,18 @@
 [build-system]
-requires = [
-  "setuptools>=62.1",
-  "setuptools_scm[toml]>=6.2",
-  "wheel",]
+requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "py_template"
 description = "Template Python repository"
-requires-python = ">=3.10"
+dynamic = ["version"]
 readme = { file = "README.rst", content-type = "text/x-rst" }
 license = { file = "LICENSE.rst", content-type = "text/plain" }
 authors = [
   { name = "Jeff Jennings", email = "jjennings@flatironinstitute.org" },
 ]
+requires-python = ">=3.10"
 dependencies = ["numpy>=1.24"]
-dynamic = ["version"]
 
 [project.optional-dependencies]
 test = [
