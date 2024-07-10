@@ -94,7 +94,7 @@
 <section id="repo-file-structure">
 <h2>Repo file structure<a class="headerlink" href="#repo-file-structure" title="Link to this heading"></a></h2>
 <div class="line-block">
-<div class="line">The <code class="xref py py-obj docutils literal notranslate"><span class="pre">py_template</span></code> repo has a common file structure:</div>
+<div class="line">The <code class="xref py py-obj docutils literal notranslate"><span class="pre">py_template</span></code> repo has a basic file structure:</div>
 <div class="line">1) <code class="xref py py-obj docutils literal notranslate"><span class="pre">github</span></code> has two subfolders:</div>
 <div class="line-block">
 <div class="line">* <code class="xref py py-obj docutils literal notranslate"><span class="pre">ISSUE_TEMPLATE</span></code> has files that are templates users can select from when opening an issue in the repo on GitHub</div>
@@ -102,6 +102,7 @@
 <div class="line-block">
 <div class="line">- <code class="xref py py-obj docutils literal notranslate"><span class="pre">docs.yml</span></code> builds and deploys this docs site when a push is made to <code class="xref py py-obj docutils literal notranslate"><span class="pre">main</span></code>.</div>
 <div class="line">- <code class="xref py py-obj docutils literal notranslate"><span class="pre">format_lint.yml</span></code> lints and formats the code on each push using <em>ruff</em> and <em>black</em>.</div>
+<div class="line">- <code class="xref py py-obj docutils literal notranslate"><span class="pre">package.yml</span></code> releases the package to PyPI on each <em>tagged</em> push to <code class="xref py py-obj docutils literal notranslate"><span class="pre">main</span></code>. This makes the latest tagged version of the package <code class="xref py py-obj docutils literal notranslate"><span class="pre">pip</span></code>-installable.</div>
 <div class="line">- <code class="xref py py-obj docutils literal notranslate"><span class="pre">tests.yml</span></code> runs tests with <em>pytest</em> on each push.</div>
 <div class="line">- <code class="xref py py-obj docutils literal notranslate"><span class="pre">type_check.yml</span></code> runs type checking with <em>mypy</em> on each push. The CI continues even if the type checker finds errors.</div>
 </div>
@@ -114,7 +115,7 @@
 <div class="line">7) <code class="xref py py-obj docutils literal notranslate"><span class="pre">LICENSE.rst</span></code> has the package’s license.</div>
 <div class="line">8) <code class="xref py py-obj docutils literal notranslate"><span class="pre">MANIFEST.in</span></code> has instructions for how to pre-process the package (which files to exclude) when preparing to release it to PyPI (the Python Package Index). Packages uploaded to PyPI can be installed by users with <em>pip</em>.</div>
 <div class="line">9) <code class="xref py py-obj docutils literal notranslate"><span class="pre">README.md</span></code> is the file you’re reading! It has badges that use the CI to display if the unit tests are passing, what percentage of the code is covered by the tests, and if the docs build and deploy is passing.</div>
-<div class="line">10) <code class="xref py py-obj docutils literal notranslate"><span class="pre">pyproject.toml</span></code> is the configuration file for the entire package. See the <a class="reference external" href="https://packaging.python.org/en/latest/guides/writing-pyproject-toml/">Python docs</a> for a description of its contents.</div>
+<div class="line">10) <code class="xref py py-obj docutils literal notranslate"><span class="pre">pyproject.toml</span></code> is the configuration file for packaging the software. See the <a class="reference external" href="https://packaging.python.org/en/latest/guides/writing-pyproject-toml/">Python docs</a> for a description of its contents. See also the <code class="xref py py-obj docutils literal notranslate"><span class="pre">example_setup_files</span></code> directory for an example minimal <code class="xref py py-obj docutils literal notranslate"><span class="pre">pyproject.toml</span></code> and the analogous <code class="xref py py-obj docutils literal notranslate"><span class="pre">setup.py</span></code>.</div>
 </div>
 </section>
 <section id="making-a-new-python-repo-using-py-template">
