@@ -9,7 +9,7 @@ Repo file structure
 |   * `workflows` implements continuous integration (CI) through GitHub 'actions' that are automatically run according to a chosen trigger. These are currently:
 |        - `docs.yml` builds and deploys this docs site when a push is made to `main`.
 |        - `format_lint.yml` lints and formats the code on each push using *ruff* and *black*.
-|        - `package.yml` releases the package to PyPI on each *tagged* push to `main`. This makes the latest tagged version of the package `pip`-installable.
+|        - `package.yml` releases the package to PyPI on each *release* (create a release from the repo's main GitHub page). This makes the latest release version of the package *pip*-installable. For a guide on how to first reserve a name for your project on PyPI (necessary for this workflow), see the `Python packaging guide <https://packaging.python.org/en/latest/guides/publishing-package-distribution-releases-using-github-actions-ci-cd-workflows/>`_.
 |        - `tests.yml` runs tests with *pytest* on each push.
 |        - `type_check.yml` runs type checking with *mypy* on each push. The CI continues even if the type checker finds errors.
 | 2) `docs` has the files used to build the docs with *Sphinx*, with the site content in `index.rst` and `py_API.rst`.
