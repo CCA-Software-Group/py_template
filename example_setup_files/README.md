@@ -1,1 +1,1 @@
-For guidance on converting from a `setup.py` file to a `pyproject.toml` file in your package, see the [Python docs](https://packaging.python.org/en/latest/guides/modernize-setup-py-project/).
+It's best to use a `pyproject.toml` file for packaging. For guidance on converting from a `setup.py` file to a `pyproject.toml` file, see the [Python docs](https://packaging.python.org/en/latest/guides/modernize-setup-py-project/).
