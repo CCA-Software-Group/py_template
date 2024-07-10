@@ -3,12 +3,13 @@ Getting started
 
 Repo file structure
 -------------------
-| The `py_template` repo has a common file structure:
+| The `py_template` repo has a basic file structure:
 | 1) `.github` has two subfolders:
 |   * `ISSUE_TEMPLATE` has files that are templates users can select from when opening an issue in the repo on GitHub
 |   * `workflows` implements continuous integration (CI) through GitHub 'actions' that are automatically run according to a chosen trigger. These are currently:
 |        - `docs.yml` builds and deploys this docs site when a push is made to `main`.
 |        - `format_lint.yml` lints and formats the code on each push using *ruff* and *black*.
+|        - `package.yml` releases the package to PyPI on each *tagged* push to `main`. This makes the latest tagged version of the package `pip`-installable.
 |        - `tests.yml` runs tests with *pytest* on each push.
 |        - `type_check.yml` runs type checking with *mypy* on each push. The CI continues even if the type checker finds errors.
 | 2) `docs` has the files used to build the docs with *Sphinx*, with the site content in `index.rst` and `py_API.rst`.
@@ -19,7 +20,7 @@ Repo file structure
 | 7) `LICENSE.rst` has the package's license.
 | 8) `MANIFEST.in` has instructions for how to pre-process the package (which files to exclude) when preparing to release it to PyPI (the Python Package Index). Packages uploaded to PyPI can be installed by users with *pip*. 
 | 9) `README.md` is the file you're reading! It has badges that use the CI to display if the unit tests are passing, what percentage of the code is covered by the tests, and if the docs build and deploy is passing.
-| 10) `pyproject.toml` is the configuration file for the entire package. See the `Python docs <https://packaging.python.org/en/latest/guides/writing-pyproject-toml/>`_ for a description of its contents.
+| 10) `pyproject.toml` is the configuration file for packaging the software. See the `Python docs <https://packaging.python.org/en/latest/guides/writing-pyproject-toml/>`_ for a description of its contents. See also the `example_setup_files` directory for an example minimal `pyproject.toml` and the analogous `setup.py`.
 
 Making a new Python repo using `py_template`
 --------------------------------------------
