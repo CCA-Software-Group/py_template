@@ -101,7 +101,7 @@
 <div class="line">* <code class="xref py py-obj docutils literal notranslate"><span class="pre">workflows</span></code> implements continuous integration (CI) through GitHub ‘actions’ that are automatically run according to a chosen trigger. These are currently:</div>
 <div class="line-block">
 <div class="line">- <code class="xref py py-obj docutils literal notranslate"><span class="pre">docs.yml</span></code> builds and deploys this docs site when a push is made to <code class="xref py py-obj docutils literal notranslate"><span class="pre">main</span></code>.</div>
-<div class="line">- <code class="xref py py-obj docutils literal notranslate"><span class="pre">format_lint.yml</span></code> lints and formats the code on each push using <em>ruff</em> and <em>black</em>.</div>
+<div class="line">- <code class="xref py py-obj docutils literal notranslate"><span class="pre">format_lint.yml</span></code> lints and formats the code on each push using <em>ruff</em>.</div>
 <div class="line">- <code class="xref py py-obj docutils literal notranslate"><span class="pre">package.yml</span></code> releases the package to PyPI on each <em>release</em> (create a release from the repo’s main GitHub page). This makes the latest release version of the package <em>pip</em>-installable. For a guide on how to first reserve a name for your project on PyPI (necessary for this workflow), see the <a class="reference external" href="https://packaging.python.org/en/latest/guides/publishing-package-distribution-releases-using-github-actions-ci-cd-workflows/">Python packaging guide</a>.</div>
 <div class="line">- <code class="xref py py-obj docutils literal notranslate"><span class="pre">tests.yml</span></code> runs tests with <em>pytest</em> on each push.</div>
 <div class="line">- <code class="xref py py-obj docutils literal notranslate"><span class="pre">type_check.yml</span></code> runs type checking with <em>mypy</em> on each push. The CI continues even if the type checker finds errors.</div>
@@ -137,7 +137,7 @@
 <div class="line">2) Run your tests:</div>
 <div class="line"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pytest</span> <span class="pre">.</span></code></div>
 <div class="line">3) Run linting and formatting to see their effects:</div>
-<div class="line"><code class="xref py py-obj docutils literal notranslate"><span class="pre">black</span> <span class="pre">.</span></code> and <code class="xref py py-obj docutils literal notranslate"><span class="pre">ruff</span> <span class="pre">check</span> <span class="pre">.</span></code></div>
+<div class="line"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ruff</span> <span class="pre">check</span> <span class="pre">.</span></code></div>
 <div class="line">4) Run type checking using mypy:</div>
 <div class="line"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mypy</span> <span class="pre">--strict</span> <span class="pre">.</span></code></div>
 <div class="line">5) Build your docs locally:</div>
