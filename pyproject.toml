@@ -30,7 +30,6 @@ docs = [
     "ipykernel",
 ]
 coding_standards = [
-    "black",
     "ruff",
 ]
 type_checking = [

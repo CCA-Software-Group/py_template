@@ -8,7 +8,7 @@ Repo file structure
 |   * `ISSUE_TEMPLATE` has files that are templates users can select from when opening an issue in the repo on GitHub
 |   * `workflows` implements continuous integration (CI) through GitHub 'actions' that are automatically run according to a chosen trigger. These are currently:
 |        - `docs.yml` builds and deploys this docs site when a push is made to `main`.
-|        - `format_lint.yml` lints and formats the code on each push using *ruff* and *black*.
+|        - `format_lint.yml` lints and formats the code on each push using *ruff*.
 |        - `package.yml` releases the package to PyPI on each *release* (create a release from the repo's main GitHub page). This makes the latest release version of the package *pip*-installable. For a guide on how to first reserve a name for your project on PyPI (necessary for this workflow), see the `Python packaging guide <https://packaging.python.org/en/latest/guides/publishing-package-distribution-releases-using-github-actions-ci-cd-workflows/>`_.
 |        - `tests.yml` runs tests with *pytest* on each push.
 |        - `type_check.yml` runs type checking with *mypy* on each push. The CI continues even if the type checker finds errors.
@@ -38,7 +38,7 @@ Interacting with your new code
 | 2) Run your tests:
 | `pytest .`
 | 3) Run linting and formatting to see their effects:
-| `black .` and `ruff check .`
+| `ruff check .`
 | 4) Run type checking using mypy:
 | `mypy --strict .`
 | 5) Build your docs locally:

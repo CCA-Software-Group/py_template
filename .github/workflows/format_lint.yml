@@ -24,10 +24,7 @@ jobs:
           pip install .[coding_standards]
 
       - name: Install package
-        run: pip install .    
-
-      - name: Run `black` formatter
-        run: black .
+        run: pip install .
 
       - name: Run `ruff` linter / formatter
         run: ruff check .
