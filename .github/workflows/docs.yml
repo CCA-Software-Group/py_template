@@ -29,7 +29,7 @@ jobs:
       - name: Display Python version
         run: python -c "import sys; print(sys.version)"
 
-      - name: Install docs dependencies
+      - name: Install package and dependencies
         run: |
           sudo apt-get install pandoc
           pip install setuptools --upgrade
@@ -37,7 +37,6 @@ jobs:
 
       - name: Make docs
         run: |
-          pip install .
           cd docs
           make html
 
